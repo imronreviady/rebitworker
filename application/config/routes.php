@@ -52,12 +52,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['under-construction'] = 'public/under_construction';
 $route['login'] = 'public/login';
-$route['login/(:any)'] = 'public/login/process';
+$route['login/(:any)'] = 'public/login/ajax_login';
 $route['logout'] = 'public/logout';
 $route['lost-password'] = 'public/lost_password';
 $route['lost-password/process'] = 'public/lost_password/process';
 $route['reset-password/(:any)'] = 'public/reset_password';
 $route['reset-password-process'] = 'public/reset_password/process';
+
+$route['admin'] = 'backend/admin';
+$route['admin/dashboard'] = 'backend/admin/dashboard';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
