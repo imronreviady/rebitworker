@@ -13,7 +13,7 @@ $autoload['config'] = array();
 
 $autoload['language'] = array();
 
-$autoload['model'] = array('crud_model');
+$autoload['model'] = array('m_core' => 'core');
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
