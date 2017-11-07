@@ -1,10 +1,15 @@
-
+<?php
+$system_name    = $this->db->get_where('settings', array('type' => 'system_name'))->row()->description;
+$system_title   = $this->db->get_where('settings', array('type' => 'system_title'))->row()->description;
+$text_align     = $this->db->get_where('settings', array('type' => 'text_align'))->row()->description;
+$account_type   = $this->session->userdata('login_type');
+?>
 <!DOCTYPE html>
 <html lang="en" >
 <!-- begin::Head -->
 <head>
 	<meta charset="utf-8" />
-	<title>Metronic | Dashboard</title>
+	<title><?php echo $page_title; ?> - <?php echo $system_title; ?></title>
 	<meta name="description" content="Latest updates and statistic charts">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,13 +44,13 @@
 						<div class="m-stack m-stack--ver m-stack--general">
 							<div class="m-stack__item m-stack__item--middle m-brand__logo">
 								<a href="index.html" class="m-brand__logo-wrapper">
-									<img alt="" src="<?= base_url(); ?>assets/demo/default/media/img/logo/logo_default_dark.png"/>
+									<!--<img alt="" src="<?= base_url(); ?>assets/demo/default/media/img/logo/logo_default_dark.png"/>-->
+									<?php echo $system_title; ?>
 								</a>
 							</div>
 							<div class="m-stack__item m-stack__item--middle m-brand__tools">
 								<!-- BEGIN: Left Aside Minimize Toggle -->
-								<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
-					 ">
+								<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block">
 									<span></span>
 								</a>
 								<!-- END -->
@@ -5654,213 +5659,212 @@
 												resolved
 											</span>
 										</a>
-										<span class="m-list-timeline__time">
-											1 hr
+									<span class="m-list-timeline__time">
+										1 hr
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										System error
+									</a>
+									<span class="m-list-timeline__time">
+										2 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server down
+										<span class="m-badge m-badge--danger m-badge--wide">
+											pending
 										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											System error
-										</a>
-										<span class="m-list-timeline__time">
-											2 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server down
-											<span class="m-badge m-badge--danger m-badge--wide">
-												pending
-											</span>
-										</a>
-										<span class="m-list-timeline__time">
-											3 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server up
-										</a>
-										<span class="m-list-timeline__time">
-											5 hrs
-										</span>
-									</div>
+									</a>
+									<span class="m-list-timeline__time">
+										3 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server up
+									</a>
+									<span class="m-list-timeline__time">
+										5 hrs
+									</span>
 								</div>
 							</div>
-							<div class="m-list-timeline__group">
-								<div class="m-list-timeline__heading">
-									Applications Logs
+						</div>
+						<div class="m-list-timeline__group">
+							<div class="m-list-timeline__heading">
+								Applications Logs
+							</div>
+							<div class="m-list-timeline__items">
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										New order received
+										<span class="m-badge m-badge--info m-badge--wide">
+											urgent
+										</span>
+									</a>
+									<span class="m-list-timeline__time">
+										7 hrs
+									</span>
 								</div>
-								<div class="m-list-timeline__items">
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											New order received
-											<span class="m-badge m-badge--info m-badge--wide">
-												urgent
-											</span>
-										</a>
-										<span class="m-list-timeline__time">
-											7 hrs
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										12 new users registered
+									</a>
+									<span class="m-list-timeline__time">
+										Just now
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										System shutdown
+									</a>
+									<span class="m-list-timeline__time">
+										11 mins
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
+									<a href="" class="m-list-timeline__text">
+										New invoices received
+									</a>
+									<span class="m-list-timeline__time">
+										20 mins
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
+									<a href="" class="m-list-timeline__text">
+										Database overloaded 89%
+									</a>
+									<span class="m-list-timeline__time">
+										1 hr
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										System error
+										<span class="m-badge m-badge--info m-badge--wide">
+											pending
 										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											12 new users registered
-										</a>
-										<span class="m-list-timeline__time">
-											Just now
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											System shutdown
-										</a>
-										<span class="m-list-timeline__time">
-											11 mins
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-										<a href="" class="m-list-timeline__text">
-											New invoices received
-										</a>
-										<span class="m-list-timeline__time">
-											20 mins
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-										<a href="" class="m-list-timeline__text">
-											Database overloaded 89%
-										</a>
-										<span class="m-list-timeline__time">
-											1 hr
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											System error
-											<span class="m-badge m-badge--info m-badge--wide">
-												pending
-											</span>
-										</a>
-										<span class="m-list-timeline__time">
-											2 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server down
-										</a>
-										<span class="m-list-timeline__time">
-											3 hrs
-										</span>
-									</div>
+									</a>
+									<span class="m-list-timeline__time">
+										2 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server down
+									</a>
+									<span class="m-list-timeline__time">
+										3 hrs
+									</span>
 								</div>
 							</div>
-							<div class="m-list-timeline__group">
-								<div class="m-list-timeline__heading">
-									Server Logs
+						</div>
+						<div class="m-list-timeline__group">
+							<div class="m-list-timeline__heading">
+								Server Logs
+							</div>
+							<div class="m-list-timeline__items">
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server up
+									</a>
+									<span class="m-list-timeline__time">
+										5 hrs
+									</span>
 								</div>
-								<div class="m-list-timeline__items">
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server up
-										</a>
-										<span class="m-list-timeline__time">
-											5 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											New order received
-										</a>
-										<span class="m-list-timeline__time">
-											7 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											12 new users registered
-										</a>
-										<span class="m-list-timeline__time">
-											Just now
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											System shutdown
-										</a>
-										<span class="m-list-timeline__time">
-											11 mins
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
-										<a href="" class="m-list-timeline__text">
-											New invoice received
-										</a>
-										<span class="m-list-timeline__time">
-											20 mins
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
-										<a href="" class="m-list-timeline__text">
-											Database overloaded 89%
-										</a>
-										<span class="m-list-timeline__time">
-											1 hr
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											System error
-										</a>
-										<span class="m-list-timeline__time">
-											2 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server down
-										</a>
-										<span class="m-list-timeline__time">
-											3 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
-										<a href="" class="m-list-timeline__text">
-											Production server up
-										</a>
-										<span class="m-list-timeline__time">
-											5 hrs
-										</span>
-									</div>
-									<div class="m-list-timeline__item">
-										<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
-										<a href="" class="m-list-timeline__text">
-											New order received
-										</a>
-										<span class="m-list-timeline__time">
-											1117 hrs
-										</span>
-									</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										New order received
+									</a>
+									<span class="m-list-timeline__time">
+										7 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										12 new users registered
+									</a>
+									<span class="m-list-timeline__time">
+										Just now
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										System shutdown
+									</a>
+									<span class="m-list-timeline__time">
+										11 mins
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-danger"></span>
+									<a href="" class="m-list-timeline__text">
+										New invoice received
+									</a>
+									<span class="m-list-timeline__time">
+										20 mins
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-warning"></span>
+									<a href="" class="m-list-timeline__text">
+										Database overloaded 89%
+									</a>
+									<span class="m-list-timeline__time">
+										1 hr
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										System error
+									</a>
+									<span class="m-list-timeline__time">
+										2 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server down
+									</a>
+									<span class="m-list-timeline__time">
+										3 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-success"></span>
+									<a href="" class="m-list-timeline__text">
+										Production server up
+									</a>
+									<span class="m-list-timeline__time">
+										5 hrs
+									</span>
+								</div>
+								<div class="m-list-timeline__item">
+									<span class="m-list-timeline__badge m-list-timeline__badge--state-info"></span>
+									<a href="" class="m-list-timeline__text">
+										New order received
+									</a>
+									<span class="m-list-timeline__time">
+										1117 hrs
+									</span>
 								</div>
 							</div>
 						</div>
@@ -5868,50 +5872,51 @@
 				</div>
 			</div>
 		</div>
-		<!-- end::Quick Sidebar -->
-		<!-- begin::Scroll Top -->
-		<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
-			<i class="la la-arrow-up"></i>
-		</div>
-		<!-- end::Scroll Top -->
-		<!-- begin::Quick Nav -->
-		<ul class="m-nav-sticky" style="margin-top: 30px;">
-			<!--
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Showcase" data-placement="left">
-				<a href="">
-					<i class="la la-eye"></i>
-				</a>
-			</li>
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Pre-sale Chat" data-placement="left">
-				<a href="" >
-					<i class="la la-comments-o"></i>
-				</a>
-			</li>
-			-->
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Purchase" data-placement="left">
-				<a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">
-					<i class="la la-cart-arrow-down"></i>
-				</a>
-			</li>
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Documentation" data-placement="left">
-				<a href="http://keenthemes.com/metronic/documentation.html" target="_blank">
-					<i class="la la-code-fork"></i>
-				</a>
-			</li>
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Support" data-placement="left">
-				<a href="http://keenthemes.com/forums/forum/support/metronic5/" target="_blank">
-					<i class="la la-life-ring"></i>
-				</a>
-			</li>
-		</ul>
-		<!-- begin::Quick Nav -->
-		<!--begin::Base Scripts -->
-		<script src="<?= base_url(); ?>assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
-		<script src="<?= base_url(); ?>assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
-		<!--end::Base Scripts -->
-		<!--begin::Page Snippets -->
-		<script src="<?= base_url(); ?>assets/app/js/dashboard.js" type="text/javascript"></script>
-		<!--end::Page Snippets -->
-	</body>
-	<!-- end::Body -->
+	</div>
+	<!-- end::Quick Sidebar -->
+	<!-- begin::Scroll Top -->
+	<div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+		<i class="la la-arrow-up"></i>
+	</div>
+	<!-- end::Scroll Top -->
+	<!-- begin::Quick Nav -->
+	<ul class="m-nav-sticky" style="margin-top: 30px;">
+		<!--
+		<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Showcase" data-placement="left">
+			<a href="">
+				<i class="la la-eye"></i>
+			</a>
+		</li>
+		<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Pre-sale Chat" data-placement="left">
+			<a href="" >
+				<i class="la la-comments-o"></i>
+			</a>
+		</li>
+		-->
+		<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Purchase" data-placement="left">
+			<a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">
+				<i class="la la-cart-arrow-down"></i>
+			</a>
+		</li>
+		<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Documentation" data-placement="left">
+			<a href="http://keenthemes.com/metronic/documentation.html" target="_blank">
+				<i class="la la-code-fork"></i>
+			</a>
+		</li>
+		<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Support" data-placement="left">
+			<a href="http://keenthemes.com/forums/forum/support/metronic5/" target="_blank">
+				<i class="la la-life-ring"></i>
+			</a>
+		</li>
+	</ul>
+	<!-- begin::Quick Nav -->
+	<!--begin::Base Scripts -->
+	<script src="<?= base_url(); ?>assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+	<script src="<?= base_url(); ?>assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+	<!--end::Base Scripts -->
+	<!--begin::Page Snippets -->
+	<script src="<?= base_url(); ?>assets/app/js/dashboard.js" type="text/javascript"></script>
+	<!--end::Page Snippets -->
+</body>
+<!-- end::Body -->
 </html>
