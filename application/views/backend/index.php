@@ -1,136 +1,134 @@
 
 <!DOCTYPE html>
 <html lang="en" >
-	<!-- begin::Head -->
-	<head>
-		<meta charset="utf-8" />
-		<title>
-			Metronic | Dashboard
-		</title>
-		<meta name="description" content="Latest updates and statistic charts">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!--begin::Web font -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
-          WebFont.load({
+<!-- begin::Head -->
+<head>
+	<meta charset="utf-8" />
+	<title>Metronic | Dashboard</title>
+	<meta name="description" content="Latest updates and statistic charts">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--begin::Web font -->
+	<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+	<script>
+        WebFont.load({
             google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
             active: function() {
                 sessionStorage.fonts = true;
             }
-          });
-		</script>
-		<!--end::Web font -->
-		<!--begin::Base Styles -->
-		<link href="<?= base_url(); ?>assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
-		<link href="<?= base_url(); ?>assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
-		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="<?= base_url(); ?>assets/demo/default/media/img/logo/favicon.ico" />
-	</head>
-	<!-- end::Head -->
-	<!-- end::Body -->
-	<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
-		<!-- begin:: Page -->
-		<div class="m-grid m-grid--hor m-grid--root m-page">
-			<!-- BEGIN: Header -->
-			<header class="m-grid__item    m-header "  data-minimize-mobile="hide" data-minimize-offset="200" data-minimize-mobile-offset="200" >
-				<div class="m-container m-container--fluid m-container--full-height">
-					<div class="m-stack m-stack--ver m-stack--desktop">
-						<!-- BEGIN: Brand -->
-						<div class="m-stack__item m-brand  m-brand--skin-dark ">
-							<div class="m-stack m-stack--ver m-stack--general">
-								<div class="m-stack__item m-stack__item--middle m-brand__logo">
-									<a href="index.html" class="m-brand__logo-wrapper">
-										<img alt="" src="<?= base_url(); ?>assets/demo/default/media/img/logo/logo_default_dark.png"/>
-									</a>
-								</div>
-								<div class="m-stack__item m-stack__item--middle m-brand__tools">
-									<!-- BEGIN: Left Aside Minimize Toggle -->
-									<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
+        });
+	</script>
+	<!--end::Web font -->
+	<!--begin::Base Styles -->
+	<link href="<?= base_url(); ?>assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+	<link href="<?= base_url(); ?>assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+	<!--end::Base Styles -->
+	<link rel="shortcut icon" href="<?= base_url(); ?>assets/demo/default/media/img/logo/favicon.ico" />
+</head>
+<!-- end::Head -->
+<!-- end::Body -->
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
+	<!-- begin:: Page -->
+	<div class="m-grid m-grid--hor m-grid--root m-page">
+		<!-- BEGIN: Header -->
+		<header class="m-grid__item    m-header "  data-minimize-mobile="hide" data-minimize-offset="200" data-minimize-mobile-offset="200" >
+			<div class="m-container m-container--fluid m-container--full-height">
+				<div class="m-stack m-stack--ver m-stack--desktop">
+					<!-- BEGIN: Brand -->
+					<div class="m-stack__item m-brand  m-brand--skin-dark ">
+						<div class="m-stack m-stack--ver m-stack--general">
+							<div class="m-stack__item m-stack__item--middle m-brand__logo">
+								<a href="index.html" class="m-brand__logo-wrapper">
+									<img alt="" src="<?= base_url(); ?>assets/demo/default/media/img/logo/logo_default_dark.png"/>
+								</a>
+							</div>
+							<div class="m-stack__item m-stack__item--middle m-brand__tools">
+								<!-- BEGIN: Left Aside Minimize Toggle -->
+								<a href="javascript:;" id="m_aside_left_minimize_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-desktop-inline-block 
 					 ">
-										<span></span>
-									</a>
-									<!-- END -->
-									<!-- BEGIN: Responsive Aside Left Menu Toggler -->
-									<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
-										<span></span>
-									</a>
-									<!-- END -->
-									<!-- BEGIN: Responsive Header Menu Toggler -->
-									<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
-										<span></span>
-									</a>
-									<!-- END -->
-									<!-- BEGIN: Topbar Toggler -->
-									<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
-										<i class="flaticon-more"></i>
-									</a>
-									<!-- BEGIN: Topbar Toggler -->
-								</div>
+									<span></span>
+								</a>
+								<!-- END -->
+								<!-- BEGIN: Responsive Aside Left Menu Toggler -->
+								<a href="javascript:;" id="m_aside_left_offcanvas_toggle" class="m-brand__icon m-brand__toggler m-brand__toggler--left m--visible-tablet-and-mobile-inline-block">
+									<span></span>
+								</a>
+								<!-- END -->
+								<!-- BEGIN: Responsive Header Menu Toggler -->
+								<a id="m_aside_header_menu_mobile_toggle" href="javascript:;" class="m-brand__icon m-brand__toggler m--visible-tablet-and-mobile-inline-block">
+									<span></span>
+								</a>
+								<!-- END -->
+								<!-- BEGIN: Topbar Toggler -->
+								<a id="m_aside_header_topbar_mobile_toggle" href="javascript:;" class="m-brand__icon m--visible-tablet-and-mobile-inline-block">
+									<i class="flaticon-more"></i>
+								</a>
+								<!-- BEGIN: Topbar Toggler -->
 							</div>
 						</div>
-						<!-- END: Brand -->
-						<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
-							<!-- BEGIN: Horizontal Menu -->
-							<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
-								<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
-									<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" aria-haspopup="true">
-										<a  href="#" class="m-menu__link m-menu__toggle">
-											<i class="m-menu__link-icon flaticon-add"></i>
-											<span class="m-menu__link-text">
-												Actions
-											</span>
-											<i class="m-menu__hor-arrow la la-angle-down"></i>
-											<i class="m-menu__ver-arrow la la-angle-right"></i>
-										</a>
-										<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
-											<span class="m-menu__arrow m-menu__arrow--adjust"></span>
-											<ul class="m-menu__subnav">
-												<li class="m-menu__item "  aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-file"></i>
-														<span class="m-menu__link-text">
-															Create New Post
-														</span>
-													</a>
-												</li>
-												<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-													<a  href="header/actions.html" class="m-menu__link ">
-														<i class="m-menu__link-icon flaticon-diagram"></i>
-														<span class="m-menu__link-title">
-															<span class="m-menu__link-wrap">
-																<span class="m-menu__link-text">
-																	Generate Reports
-																</span>
-																<span class="m-menu__link-badge">
-																	<span class="m-badge m-badge--success">
-																		2
-																	</span>
+					</div>
+					<!-- END: Brand -->
+					<div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+						<!-- BEGIN: Horizontal Menu -->
+						<div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-dark m-aside-header-menu-mobile--submenu-skin-dark "  >
+							<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+								<li class="m-menu__item  m-menu__item--submenu m-menu__item--rel"  data-menu-submenu-toggle="click" aria-haspopup="true">
+									<a  href="#" class="m-menu__link m-menu__toggle">
+										<i class="m-menu__link-icon flaticon-add"></i>
+										<span class="m-menu__link-text">
+											Actions
+										</span>
+										<i class="m-menu__hor-arrow la la-angle-down"></i>
+										<i class="m-menu__ver-arrow la la-angle-right"></i>
+									</a>
+									<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left">
+										<span class="m-menu__arrow m-menu__arrow--adjust"></span>
+										<ul class="m-menu__subnav">
+											<li class="m-menu__item "  aria-haspopup="true">
+												<a  href="header/actions.html" class="m-menu__link ">
+													<i class="m-menu__link-icon flaticon-file"></i>
+													<span class="m-menu__link-text">
+														Create New Post
+													</span>
+												</a>
+											</li>
+											<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+												<a  href="header/actions.html" class="m-menu__link ">
+													<i class="m-menu__link-icon flaticon-diagram"></i>
+													<span class="m-menu__link-title">
+														<span class="m-menu__link-wrap">
+															<span class="m-menu__link-text">
+																Generate Reports
+															</span>
+															<span class="m-menu__link-badge">
+																<span class="m-badge m-badge--success">
+																	2
 																</span>
 															</span>
 														</span>
-													</a>
-												</li>
-												<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" aria-haspopup="true">
-													<a  href="#" class="m-menu__link m-menu__toggle">
-														<i class="m-menu__link-icon flaticon-business"></i>
-														<span class="m-menu__link-text">
-															Manage Orders
-														</span>
-														<i class="m-menu__hor-arrow la la-angle-right"></i>
-														<i class="m-menu__ver-arrow la la-angle-right"></i>
-													</a>
-													<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
-														<span class="m-menu__arrow "></span>
-														<ul class="m-menu__subnav">
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
-																<a  href="header/actions.html" class="m-menu__link ">
-																	<span class="m-menu__link-text">
-																		Latest Orders
-																	</span>
-																</a>
-															</li>
-															<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+													</span>
+												</a>
+											</li>
+											<li class="m-menu__item  m-menu__item--submenu"  data-menu-submenu-toggle="hover" aria-haspopup="true">
+												<a  href="#" class="m-menu__link m-menu__toggle">
+													<i class="m-menu__link-icon flaticon-business"></i>
+													<span class="m-menu__link-text">
+														Manage Orders
+													</span>
+													<i class="m-menu__hor-arrow la la-angle-right"></i>
+													<i class="m-menu__ver-arrow la la-angle-right"></i>
+												</a>
+												<div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--right">
+													<span class="m-menu__arrow "></span>
+													<ul class="m-menu__subnav">
+														<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
+															<a  href="header/actions.html" class="m-menu__link ">
+																<span class="m-menu__link-text">
+																	Latest Orders
+																</span>
+															</a>
+														</li>
+														<li class="m-menu__item "  data-redirect="true" aria-haspopup="true">
 																<a  href="header/actions.html" class="m-menu__link ">
 																	<span class="m-menu__link-text">
 																		Pending Orders
@@ -2601,6 +2599,126 @@
 					</div>
 					<!-- END: Subheader -->
 					<div class="m-content">
+						<!--begin:: Widgets/Stats-->
+						<div class="m-portlet">
+							<div class="m-portlet__body  m-portlet__body--no-padding">
+								<div class="row m-row--no-padding m-row--col-separator-xl">
+									<div class="col-md-12 col-lg-6 col-xl-3">
+										<!--begin::Total Profit-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<h4 class="m-widget24__title">
+													Total Frofit
+												</h4>
+												<br>
+												<span class="m-widget24__desc">
+													All Customs Value
+												</span>
+												<span class="m-widget24__stats m--font-brand">
+													$17,800
+												</span>
+												<div class="m--space-10"></div>
+												<div class="progress m-progress--sm">
+													<div class="progress-bar m--bg-brand" role="progressbar" style="width: 78%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<span class="m-widget24__change">
+													Change
+												</span>
+												<span class="m-widget24__number">
+													78%
+												</span>
+											</div>
+										</div>
+										<!--end::Total Profit-->
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-3">
+										<!--begin::New Feedbacks-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<h4 class="m-widget24__title">
+													New Feedbacks
+												</h4>
+												<br>
+												<span class="m-widget24__desc">
+													Customer Review
+												</span>
+												<span class="m-widget24__stats m--font-info">
+													1349
+												</span>
+												<div class="m--space-10"></div>
+												<div class="progress m-progress--sm">
+													<div class="progress-bar m--bg-info" role="progressbar" style="width: 84%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<span class="m-widget24__change">
+													Change
+												</span>
+												<span class="m-widget24__number">
+													84%
+												</span>
+											</div>
+										</div>
+										<!--end::New Feedbacks-->
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-3">
+										<!--begin::New Orders-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<h4 class="m-widget24__title">
+													New Orders
+												</h4>
+												<br>
+												<span class="m-widget24__desc">
+													Fresh Order Amount
+												</span>
+												<span class="m-widget24__stats m--font-danger">
+													567
+												</span>
+												<div class="m--space-10"></div>
+												<div class="progress m-progress--sm">
+													<div class="progress-bar m--bg-danger" role="progressbar" style="width: 69%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<span class="m-widget24__change">
+													Change
+												</span>
+												<span class="m-widget24__number">
+													69%
+												</span>
+											</div>
+										</div>
+										<!--end::New Orders-->
+									</div>
+									<div class="col-md-12 col-lg-6 col-xl-3">
+										<!--begin::New Users-->
+										<div class="m-widget24">
+											<div class="m-widget24__item">
+												<h4 class="m-widget24__title">
+													New Users
+												</h4>
+												<br>
+												<span class="m-widget24__desc">
+													Joined New User
+												</span>
+												<span class="m-widget24__stats m--font-success">
+													276
+												</span>
+												<div class="m--space-10"></div>
+												<div class="progress m-progress--sm">
+													<div class="progress-bar m--bg-success" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+												</div>
+												<span class="m-widget24__change">
+													Change
+												</span>
+												<span class="m-widget24__number">
+													90%
+												</span>
+											</div>
+										</div>
+										<!--end::New Users-->
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--end:: Widgets/Stats-->
 						<!--Begin::Main Portlet-->
 						<div class="row">
 							<div class="col-xl-4">
