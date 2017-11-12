@@ -61,6 +61,7 @@ $route['reset-password-process'] = 'public/reset_password/process';
 
 $route['admin'] = 'backend/admin';
 $route['admin/dashboard'] = 'backend/admin/dashboard';
+$route['admin/authors'] = 'backend/admin/authors';
 
 $route['default_controller'] = 'home';
 $route['404_override'] = '';
